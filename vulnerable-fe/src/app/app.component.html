@@ -1,0 +1,71 @@
+<div class="container mt-5" *ngIf="user">
+  <div class="row">
+    <div class="col">
+      <h2>Hello {{ user.name }}</h2>
+      <p><strong>Name:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Balance:</strong> {{ user.balance }}</p>
+    </div>
+  </div>
+
+
+  <div class="container mt-5" *ngIf="user">
+    <div class="row">
+      <div class="col">
+        <h2>User Details</h2>
+        <form (submit)="updateUser()">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="user.name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!--  Message if admin-->
+  <div class="mt-4" *ngIf="user && user.isAdmin">
+    <div class="alert alert-success">
+      Hello {{user.name}}! You are an admin. Welcome to the admin dashboard!
+    </div>
+  </div>
+
+</div>
+
+<div class="container mt-5" *ngIf="errorMessage">
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-danger" role="alert">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Display the list of products -->
+<div class="container mt-5" *ngIf="products.length > 0">
+  <h2>Products</h2>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let product of products">
+      {{ product.name }}
+      <button class="btn btn-sm btn-success ml-2" (click)="openBuyConfirmationDialog()">Buy</button>
+    </li>
+  </ul>
+</div>
+
+
+<!-- Display error message if there's an error fetching products -->
+<div class="container mt-5" *ngIf="errorMessage">
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-danger" role="alert">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>
+</div>
