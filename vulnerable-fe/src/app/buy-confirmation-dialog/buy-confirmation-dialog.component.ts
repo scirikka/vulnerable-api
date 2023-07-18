@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import {Component} from '@angular/core';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-buy-confirmation-dialog',
@@ -11,9 +11,10 @@ import { MatDialogRef } from '@angular/material/dialog';
   `,
 })
 export class BuyConfirmationDialogComponent {
-  constructor(public dialogRef: MatDialogRef<BuyConfirmationDialogComponent>) {}
+  constructor (public dialogRef: MatDialogRef<BuyConfirmationDialogComponent>) {
+  }
 
-  onCloseClick(): void {
+  onCloseClick (): void {
     this.dialogRef.close();
   }
 }

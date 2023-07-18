@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BuyConfirmationDialogComponent } from './buy-confirmation-dialog.component';
+import {BuyConfirmationDialogComponent} from './buy-confirmation-dialog.component';
 
 describe('BuyConfirmationDialogComponent', () => {
   let component: BuyConfirmationDialogComponent;
