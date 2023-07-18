@@ -1,5 +1,7 @@
 INSERT INTO users (id, name, email, balance, cvc, is_admin) VALUES (0, 'Steve', 'steve@example.com', 1000, 159,  false);
 INSERT INTO users (id, name, email, balance, cvc, is_admin) VALUES (1, 'John', 'john@example.com', 5000, 054, true);
+INSERT INTO users (id, name, email, balance, cvc, is_admin) VALUES (2, 'Bob', 'Bob@example.com', 100, 689, false);
+
 
 INSERT INTO products (id, name) VALUES (1, 'Product1');
 INSERT INTO products (id, name) VALUES (2, 'Product2');
